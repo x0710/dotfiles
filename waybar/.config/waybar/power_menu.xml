@@ -1,0 +1,8 @@
+<menu id="power_menu">
+  <item label="Reboot" action="systemctl reboot"/>
+  <item label="Power Off" action="systemctl poweroff"/>
+  <item label="Suspend" action="systemctl suspend"/>
+  <item label="Lock" action="swaylock"/>
+  <item label="Logout" action="swaymsg exit"/>
+</menu>
+
