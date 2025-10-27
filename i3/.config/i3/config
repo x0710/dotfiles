@@ -1,8 +1,9 @@
 # 自定义设置
-exec_always feh --bg-scale --randomize ~/Pictures
+exec_always feh --bg-scale --randomize ~/Pictures/wallpapers
 exec --no-startup-id fcitx5 &
+exec --no-startup-id kdeconnectd &
+exec --no-startup-id clash-meta -d ~
 exec --no-startup-id flameshot &
-exec --no-startup-id clash-verge &
 exec --no-startup-id veriety &
 #exec --no-startup-id clash-verge &
 #exec --no-startup-id polybar &
@@ -43,7 +44,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -53,6 +54,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym ctrl+shift+Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym ctrl+shift+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym ctrl+shift+K exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym ctrl+shift+J exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -176,12 +179,12 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
+        # Pressing up will shrink the window’s height.
         bindsym k resize shrink height 10 px or 10 ppt
+        # Pressing down will grow the window’s height.
+        bindsym j resize grow height 10 px or 10 ppt
+        # Pressing right will grow the window’s width.
         bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys

@@ -25,3 +25,4 @@ alias lss='du -ah --max-depth 1'
 
 alias wxwork='wine "~/.wine/drive_c/Program Files (x86)/WXWork/WXWork.exe"'
 
+alias opc="export HTTPS_PROXY=127.0.0.1:7890;export HTTP_PROXY=127.0.0.1:7890"

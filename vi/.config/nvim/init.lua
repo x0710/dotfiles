@@ -21,7 +21,7 @@ vim.o.expandtab = true        -- 将 <Tab> 转为空格
 vim.o.smartindent = true      -- 新行智能缩进
 
 vim.o.mouse = "a"             -- 启用鼠标支持
-vim.o.clipboard = "unnamedplus" -- 使用系统剪贴板
+-- vim.o.clipboard = "unnamedplus" -- 使用系统剪贴板
 vim.o.undofile = true         -- 持久化撤销
 vim.o.backup = false          -- 不生成备份文件
 vim.o.swapfile = false        -- 不生成 swap 文件
