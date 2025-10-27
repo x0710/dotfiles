@@ -37,6 +37,9 @@
 - xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #### i3 桌面
 - i3                i3基本组件
+	- xss-lock	锁屏工具
+	- i3lock	i3专用锁屏软件
+	- dex		软件启动器
 - dmenu             i3可用程序启动器
 ### Wayland安装以下组件
 #### hyprland
