@@ -2,7 +2,7 @@
 
 # 启动 kitty 终端运行 cmatrix
 fcitx5-remote -c
-kitty --start-as fullscreen --title cmatrix -e bash -c "sleep 0.2; cmatrix -C $(shuf -n 1 -e red green yellow blue magenta cyan white black) -b -u 4 "&
+kitty --start-as fullscreen --title cmatrix -e bash -c "sleep 0.5; $(shuf -n 1 -e "cmatrix -C $(shuf -n 1 -e red green yellow blue magenta cyan white black) -b -u 4" nyancat)"&
 
 # cmatrix 运行完或者锁屏解锁后再恢复
 # fcitx5-remote -o
