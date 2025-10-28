@@ -1,6 +1,11 @@
-# 自定义设置
+# 随机壁纸
 exec_always feh --bg-scale --randomize ~/Pictures/wallpapers
 exec_always --no-startup-id picom &
+# 屏保+锁屏,通过xss-lock调用
+exec_always --no-startup-id xset s 300 
+# 关闭显示屏
+exec_always --no-startup-id xset dpms 1200 2400 2400
+
 exec --no-startup-id fcitx5 &
 exec --no-startup-id kdeconnectd &
 exec --no-startup-id clash-meta -d ~
@@ -42,6 +47,8 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/dotfiles/script/cmatrix-lock.sh --nofork
+# 10 分钟无操作后自动锁屏
+# exec --no-startup-id xautolock -time 10 -locker "~/dotfiles/script/cmatrix-lock.sh"
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
